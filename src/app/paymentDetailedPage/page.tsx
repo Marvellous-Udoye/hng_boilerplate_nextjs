@@ -47,43 +47,43 @@ export default function PaymentPlan() {
   }, []);
 
   return (
-    <main className="min-h-svh max-w-[989px] mx-auto mt-[102px]">
+    <main className="mx-auto mt-[102px] min-h-svh max-w-[989px]">
       <article className={styles.main}>
-        <p className="font-[600] text-[24px] text[#0A0A0A] pl-[17px]">
+        <p className="text[#0A0A0A] pl-[17px] text-[24px] font-[600]">
           Current Plan
         </p>
 
-        <div className="pl-[17px] pt-[24px] pb-[22px] pr-[94px] bg-[#FFF8F2] rounded-[12px] my-[24px]">
+        <div className="my-[24px] rounded-[12px] bg-[#FFF8F2] pb-[22px] pl-[17px] pr-[94px] pt-[24px]">
           {selectedPlan && (
             <>
-              <p className="text-[#0A0A0A] text-[20px] font-[600] leading-normal">
+              <p className="text-[20px] font-[600] leading-normal text-[#0A0A0A]">
                 {selectedPlan.name}
               </p>
-              <p className="text-[14px] font-[400] md:whitespace-nowrap min-w-[350px]">
+              <p className="min-w-[350px] text-[14px] font-[400] md:whitespace-nowrap">
                 {selectedPlan.current_plan_description}
               </p>
-              <p className="text-[#525252] text-[14px] font-[400]">
+              <p className="text-[14px] font-[400] text-[#525252]">
                 ${selectedPlan.price}/month
               </p>
             </>
           )}
         </div>
 
-        <div className="pl-[17px] flex w-full sm:flex-row gap-4 min-h-[222px] flex sm:mx-auto">
-          <p className="text-[16px] font-[600] mt-[15px] max-w-[130px]">
+        <div className="flex min-h-[222px] w-full gap-4 pl-[17px] sm:mx-auto sm:flex-row">
+          <p className="mt-[15px] max-w-[130px] text-[16px] font-[600]">
             Subscribe to your desired plan
           </p>
           <div className={styles.paymentCtn}>
             {paymentPlan.map((plan, index) => (
               <div key={index} className={styles.paymentCards}>
                 <p className="text-[16px] font-[600]">{plan.name}</p>
-                <p className="text-[25px] font-[500] py-4">
+                <p className="py-4 text-[25px] font-[500]">
                   {`$${plan.price}`}{" "}
                   <span className="text-[14px] font-[400] text-[#525252]">
                     /month
                   </span>
                 </p>
-                <p className="text-[14px] font-[400] text-[#525252] max-w-[160px]">
+                <p className="max-w-[160px] text-[14px] font-[400] text-[#525252]">
                   {plan.description}
                 </p>
                 <button
@@ -97,7 +97,7 @@ export default function PaymentPlan() {
           </div>
         </div>
 
-        <div className="flex w-full sm:flex sm:flex-cols">
+        <div className="sm:flex-cols flex w-full sm:flex">
           <p className={styles.highlightTitle}>Highlights</p>
           <div className={styles.highlight}>
             {detailedPayment.map((plan, index) => (
@@ -112,7 +112,7 @@ export default function PaymentPlan() {
           </div>
         </div>
 
-        <p className="font-[700] text-[16px] bg-[#FFF8F2] py-[28px] pl-[10px] pr-[39px] leading-[19.36px] ">
+        <p className="bg-[#FFF8F2] py-[28px] pl-[10px] pr-[39px] text-[16px] font-[700] leading-[19.36px]">
           Project Management
         </p>
         <div className={styles.prodMgt}>
@@ -133,7 +133,7 @@ export default function PaymentPlan() {
           ))}
         </div>
 
-        <p className="font-[700] text-[16px] bg-[#FFF8F2] py-[28px] pl-[10px] pr-[39px] leading-[19.36px]">
+        <p className="bg-[#FFF8F2] py-[28px] pl-[10px] pr-[39px] text-[16px] font-[700] leading-[19.36px]">
           Sharing and collaboration
         </p>
         <div className={styles.prodMgt}>
@@ -149,7 +149,7 @@ export default function PaymentPlan() {
                 {plan.projectMgt.map((projectMt, projectMtIndex) => (
                   <div
                     key={projectMtIndex}
-                    className="py-[26px] flex justify-center border-b-[0.5px] border-b-[#CBD5E1]"
+                    className="flex justify-center border-b-[0.5px] border-b-[#CBD5E1] py-[26px]"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -173,7 +173,7 @@ export default function PaymentPlan() {
           ))}
         </div>
 
-        <p className="font-[700] text-[16px] bg-[#FFF8F2] py-[28px] pl-[10px] pr-[39px] leading-[19.36px]">
+        <p className="bg-[#FFF8F2] py-[28px] pl-[10px] pr-[39px] text-[16px] font-[700] leading-[19.36px]">
           Management and security
         </p>
         <div className={styles.prodMgt}>
@@ -188,7 +188,7 @@ export default function PaymentPlan() {
                 {plan.sharing.map((share, shareIndex) => (
                   <div
                     key={shareIndex}
-                    className="py-[26px] flex justify-center border-b-[0.5px] border-b-[#CBD5E1]"
+                    className="flex justify-center border-b-[0.5px] border-b-[#CBD5E1] py-[26px]"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -212,7 +212,7 @@ export default function PaymentPlan() {
           ))}
         </div>
 
-        <p className="font-[700] text-[16px] bg-[#FFF8F2] py-[28px] pl-[10px] pr-[39px]">
+        <p className="bg-[#FFF8F2] py-[28px] pl-[10px] pr-[39px] text-[16px] font-[700]">
           Support
         </p>
         <div className={styles.prodMgt}>
@@ -226,7 +226,7 @@ export default function PaymentPlan() {
                 {plan.support.map((sup, supIndex) => (
                   <div
                     key={supIndex}
-                    className="py-[26px] flex justify-center border-b-[0.5px] border-b-[#CBD5E1]"
+                    className="flex justify-center border-b-[0.5px] border-b-[#CBD5E1] py-[26px]"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
